@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root
+{
+
+    --main-font: 'Poppins', sans-serif;
+
+    --main-color: #af1820;
+    --dark-main-color: #7c1217;
+
+    --text-color: #ffffff;
+    --muted-text-color: rgba(255, 255, 255, 0.6);
+    --ghost-text-color: rgba(255, 255, 255, 0.4);
+
+    --second-text-color: #000000;
+
+    --f-background: #0d0f14;
+    --s-background: #16181d;
+    --t-background: #24282e;
+    
+}
+
+* 
+{
+
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+body { background-color: var(--f-background); }
+
+.main
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0px;
+
+}
+
+.main__center 
+{
+
+    padding: 20px;
+    width: 500px;
+    background-color: var(--s-background);
+    border: 1px solid var(--t-background);
+    border-radius: 20px;
+
+}
+
+.main__center-geolocate form 
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.main__center-geolocate form input, .main__center-geolocate form button 
+{
+
+    outline: none;
+    border: none;
+    font-size: 9pt;
+
+}
+
+.main__center-geolocate form input 
+{
+
+    padding-left: 15px;
+    width: 300px;
+    height: 48px;
+    background-color: var(--f-background);
+    border-radius: 20px;
+
+}
+
+.main__center-geolocate form button 
+{
+
+    padding: 0px 25px;
+    height: 40px;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: var(--second-text-color);
+    font-size: 10pt;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+.main__center-geolocate form button:hover { background-color: var(--dark-main-color); }
+
+.main__center-infos 
+{
+
+    padding-top: 12px;
+    border-top: 1px solid var(--t-background);
+    display: none;
+    margin-top: 30px;
+
+}
+
+.main__center-infos__none { display: none; }
+
+.main__center-infos__none p 
+{
+
+    padding: 12px 18px;
+    background-color: var(--f-background);
+    border-radius: 20px;
+    color: var(--ghost-text-color);
+    font-size: 9.5pt;
+
+}
+
+.main__center-infos__none p i 
+{
+
+    opacity: 0.4;
+    margin-right: 10px;
+
+}
+
+.main__center-infos__list { display: none; }
+
+.info 
+{
+
+    padding: 10px 18px;
+    background-color: var(--f-background);
+    border-bottom: 1px solid var(--t-background);
+    border-top: 1px solid var(--t-background);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.info p { font-size: 9.5pt; }
+
+.info p:first-child { color: var(--muted-text-color); }
+
+.info p:nth-child(2) { color: var(--ghost-text-color); }
+
+@media screen and (max-width: 550px) 
+{
+
+    .main__center 
+    {
+
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+
+    }
+
+}
